@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %} HOME {% endblock %}
+{% block head %} Home {% endblock %}
+{% block jss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+<script>
+  function page(link){
+    location.href= link
+  }
+</script>
+{% endblock %}
+
+
+{% block content %}
+  <article id='main'>
+    <ul class='bg-main' id='api'>
+      <li>
+        <a class="hover-hp" onclick="page('/api/mc-server')"><i class="fa-solid fa-server"></i> Random Minecraft Server</a>
+        <a class="hover-hp" onclick="page('/api/catfact')"><i class="fa-solid fa-cat"></i> Catfact</a>
+      </li>
+      <li>
+        <a class="hover-hp" onclick="page('/api/avatar?name=Greeg&type=1')"><i class="fa-solid fa-robot"></i> Robot/Allien Avatar</a>
+        <a class="hover-hp" onclick="page('/api/tempmail')"><i class="fa-brands fa-at"></i> Tempmail</a>
+      </li>
+      <li>
+        <a class="hover-hp" onclick="page('/api/pinterest?search=')"><i class="fa-brands fa-pinterest"></i> Pinterest Search</a>
+        <a class="hover-hp" onclick="page('/api/ip/124.107.215.6')"><i class="fa-solid fa-magnifying-glass-location"></i> IP Checker</a>
+      </li>
+      <li>
+        <a class="hover-hp" onclick="page('/api/genderize?name=Junmar')"><i class="fa-solid fa-venus-mars"></i> Genderize</a>
+        <a class="hover-hp" onclick="page('/api/voiceBeast?query=')"><i class="fa-solid fa-microphone-lines"></i> Mr. Beast text-to-speech</a>
+      </li>
+      <li>
+        <a class="hover-hp" onclick="page('/api/github/Greegmon')"><i class="fa-brands fa-github"></i> Github Stalk</a>
+        <a class="hover-hp" onclick="page('/api/insult')"><i class="fa-solid fa-warning"></i> Insult</a>
+      </li>
+      <li>
+        <a class="hover-hp" onclick="page('/api/joke')"><i class="fa-regular fa-face-grin-squint-tears"></i> Random Joke</a>
+        <a class="hover-hp" onclick="page('/api/emojimix?one=😂&two=😈')"><i class="fa-regular fa-face-smile"></i> Emoji Mix</a>
+      </li>
+      <li>
+        <a class="hover-hp" onclick="page('/api/quiz?difficulty=medium')"><i class="fa-solid fa-book"></i> Quiz</a>
+        <a class="hover-hp" onclick="page('/api/quote')"><i class="fa-solid fa-quote-left"></i> Random Quote</a>
+      </li>
+      <li>
+        <a class="hover-hp" onclick="page('/api/fb-download?url=')"><i class="fa-brands fa-facebook"></i> Facebook Downloader</a>
+        <a class="hover-hp" onclick="page('/api/tiktok/search?q=Zuckerberg')"><i class="fa-brands fa-tiktok"></i> Tiktok Search</a>
+      </li>
+    </ul>
+    <ul class='bg-main' id="other">
+      <li><a class="hover-hp" onclick="page('/page/source')"><i class="fa-solid fa-gear"></i> Source Code</a></li>
+      <li><a class="hover-hp" onclick="page('/')"><i class="fa-solid fa-share"></i> Facebook Spamshare (<span class="mainte">Soon</span>)</a></li>
+    </ul>
+  </article>
+{% endblock %}

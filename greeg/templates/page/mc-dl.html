@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %} Download Minecraft {% endblock %}
+{% block head %} Download Minecraft {% endblock %}
+{% block jss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mc-dl.css') }}">
+{% endblock %}
+
+{% block content %}
+  <article>
+    <table class="bg-main">
+      <tr>
+        <th>Version</th>
+        <th>Click</th>
+      </tr>
+      {% for item in pkg|reverse %}
+        {% if not item.version %}
+        {% else %}
+          <tr>
+            <td>{{ item.version }}</td>
+            <td><a class="bg-hp" href="{{ item.link }}"><i class="fa-solid fa-download"></i></a></td>
+          </tr>
+        {% endif %}
+      {% endfor %}
+    </table>
+  </article>
+{% endblock %}

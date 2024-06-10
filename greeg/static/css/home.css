@@ -1,0 +1,56 @@
+main{
+  width: 60%;
+  margin: 30px auto;
+}
+
+#main{
+  display: flex;
+  flex-direction: column;
+  gap: 25px
+}
+
+ul{
+  box-shadow: -1px 2px 10px #e6e9eb;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+#other:before{
+  content: "Other";
+  font-size: 20px;
+  color: gray;
+  font-weight: 400;
+}
+#api:before{
+  content: "API";
+  font-size: 20px;
+  color: gray;
+  font-weight: 400;
+}
+
+ul li{
+  display: flex;
+  gap: 10px
+}
+ul li a{
+  width: 100%;
+  padding: 13px;
+  border-radius: 7px;
+  font-size: 13px;
+}
+ul li a i{margin-right:5px}
+
+
+.mainte{
+  color: #f1240a;
+  font-weight: 500;
+}
+
+@media(max-width:720px){
+  ul li{
+    flex-direction: column;
+  }
+  main{width: 90%}
+}

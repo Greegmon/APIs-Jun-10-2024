@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %} SOURCE CODE {% endblock %}
+{% block head %} Source Code {% endblock %}
+{% block jss %}
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const video = document.getElementById('myVideo');
+      video.requestFullscreen();
+    });
+  </script>
+  <style>
+    article{
+      width: 400px;
+      margin: 30px auto;
+      border-radius: 10px;
+    }
+    article div:nth-child(1){
+      background: #1f2125;
+      color: white;
+      border-radius: 10px 10px 0 0;
+      padding: 8px 10px;
+    }article div:nth-child(1) h2{font-weight:400}
+    
+    article div:nth-child(2){
+      background: #bfc1c7;
+      padding: 10px;
+      width: 100%;
+    }
+    video{
+      width:100%;
+      border-radius: 10px;
+    }
+    @media(max-width:720px){
+      article{width:90%}
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+  <article class="bg-main">
+    <div><h2>Agh!!! Agh!!! HAHAHAHA</h2></div>
+    <div>
+      <video id="myVideo" autoplay>
+        <source src="{{ url_for('static', filename='cache/penguin.mp4') }}">
+      </video>
+    </div>
+  </article>
+{% endblock %}

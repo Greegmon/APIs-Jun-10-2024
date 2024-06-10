@@ -1,0 +1,40 @@
+article{
+  width: 400px;
+  margin: 30px auto;
+}
+
+table{width:100%;}
+table,th,td{border: 1px solid #979797;border-collapse: collapse}
+
+th{
+  padding: 3px;
+  font-weight: 500;
+}
+
+tr td:nth-child(1){
+  padding: 3px 5px;
+  color: #909191;
+  text-align: center;
+}
+
+tr td:nth-child(2){
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 12px;
+}
+tr td:nth-child(2) a{
+  padding: 6px 7px;
+  font-size: 13px;
+  border-radius: 7px;
+  color: white;
+}
+tr td:nth-child(2) a:after{
+  content: 'Download';
+  margin-left: 5px;
+}
+
+@media(max-width:720px){
+  article{
+    width: 90%;
+  }
+}
